@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Details Tabs</title>
+  <style>
+    .tab { display: inline-block; padding: 10px; background: #eee; cursor: pointer; }
+    .panel { display: none; padding: 15px; border: 1px solid #ccc; }
+    #details { display: block; }
+  </style>
+  <script>
+    function showPanel(id) {
+      document.getElementById("details").style.display = "none";
+      document.getElementById("shipping").style.display = "none";
+      document.getElementById("reviews").style.display = "none";
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <h1>Wireless Keyboard</h1>
+  <div>
+    <span class="tab" onclick="showPanel('details')">Details</span>
+    <span class="tab" onclick="showPanel('shipping')">Shipping</span>
+    <span class="tab" onclick="showPanel('reviews')">Reviews</span>
+  </div>
+  <div id="details" class="panel"><p>Compact wireless keyboard with long battery life.</p></div>
+  <div id="shipping" class="panel"><p>Ships in 3 to 5 business days.</p></div>
+  <div id="reviews" class="panel"><p>Rated 4.5 out of 5 by customers.</p></div>
+</body>
+</html>

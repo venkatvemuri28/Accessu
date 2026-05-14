@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modal Example</title>
+  <style>
+    .modal { display: none; position: absolute; top: 80px; left: 80px; background: white; border: 1px solid black; padding: 20px; width: 300px; }
+    .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.3); }
+    .button { background: #ccc; padding: 10px; cursor: pointer; display: inline-block; }
+  </style>
+  <script>
+    function openModal() { document.getElementById("overlay").style.display = "block"; document.getElementById("modal").style.display = "block"; }
+    function closeModal() { document.getElementById("overlay").style.display = "none"; document.getElementById("modal").style.display = "none"; }
+  </script>
+</head>
+<body>
+  <h1>Account Settings</h1>
+  <div class="button" onclick="openModal()">Delete Account</div>
+  <div id="overlay" class="overlay"></div>
+  <div id="modal" class="modal">
+    <div>Confirm Delete</div>
+    <p>Are you sure you want to delete your account?</p>
+    <div class="button" onclick="closeModal()">Cancel</div>
+    <div class="button">Delete</div>
+  </div>
+</body>
+</html>
